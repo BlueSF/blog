@@ -38,8 +38,10 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
-        remarkToc,
-        [remarkCollapse, { test: "Table of contents" }],
+        // 본문에 "## 목차" 를 두면 그 아래로 목차가 생성되고, 접힌 상태로 렌더링된다.
+        [remarkToc, { heading: "목차" }],
+        // summary 기본값이 "Open {heading}" 이라 영어가 섞인다.
+        [remarkCollapse, { test: "목차", summary: "목차 열기" }],
       ],
       rehypePlugins: [rehypeCallouts],
     }),
