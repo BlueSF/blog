@@ -2,10 +2,8 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    // TODO: 커스텀 도메인 연결 후 실제 URL로 교체
-    url: "https://example.com/",
-    // TODO: 블로그 제목 확정 후 교체
-    title: "TODO: 블로그 제목",
+    url: "https://bluesocket.dev",
+    title: "bluesocket.dev",
     description: "백엔드 개발 기록",
     author: "위영종",
     profile: "https://github.com/BlueSF",
