@@ -1,6 +1,7 @@
 import type { UIStrings } from "../types";
 
 export default {
+  dateFormat: "D MMM, YYYY",
   nav: {
     home: "Home",
     posts: "Posts",

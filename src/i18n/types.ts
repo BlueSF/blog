@@ -1,4 +1,6 @@
 export interface UIStrings {
+  /** dayjs 포맷 문자열. 로케일마다 날짜 표기 순서가 달라서 문자열로 둔다. */
+  dateFormat: string;
   nav: {
     home: string;
     posts: string;
