@@ -1,7 +1,6 @@
 ---
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
@@ -24,10 +23,9 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
-const rssHref = getRelativeLocaleUrl(
-  Astro.currentLocale ?? config.site.lang,
-  "rss.xml"
-);
+// sitemap과 동일하게 base만 붙인다. getRelativeLocaleUrl은 trailing slash를 붙이는데
+// Cloudflare는 HTML 경로만 슬래시를 정규화해줘서 /rss.xml/ 이 404가 된다.
+const rssHref = getAssetPath("rss.xml");
 ---
 
 <!doctype html>
