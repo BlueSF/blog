@@ -29,5 +29,5 @@ public/pagefind
 # pnpm
 .pnpm-store
 
-# docker compose
-compose.override.yaml
+# wrangler local state
+.wrangler/
