@@ -123,11 +123,11 @@ grep -l "<transient\|post-persist\|entity-listener" src/main/resources/META-INF/
 
 이번엔 추측하지 않고 돌려 봤다. 클래스는 하나로 고정하고 XML만 세 벌 만들었다.
 
-| | `metadata-complete` | XML의 `<transient>` | 결과 |
-| --- | --- | --- | --- |
-| A | 없음 | 없음 | 기동 성공 — 클래스의 `@Transient`가 읽힌다 |
-| B | `true` | 없음 | **기동 실패** |
-| C | `true` | 있음 | 기동 성공 |
+|     | `metadata-complete` | XML의 `<transient>` | 결과                                       |
+| --- | ------------------- | ------------------- | ------------------------------------------ |
+| A   | 없음                | 없음                | 기동 성공 — 클래스의 `@Transient`가 읽힌다 |
+| B   | `true`              | 없음                | **기동 실패**                              |
+| C   | `true`              | 있음                | 기동 성공                                  |
 
 ```
 [기동 실패] metadata-complete="true"      + XML에 <transient> 없음
