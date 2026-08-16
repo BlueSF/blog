@@ -14,7 +14,7 @@ pnpm preview
 ## 글 쓰기
 
 `src/content/posts/` 에 `.md` 또는 `.mdx` 파일을 추가한다. **파일명이 그대로 URL 슬러그**가 된다
-(`jpa-entity-final-orm-xml.md` → `/posts/jpa-entity-final-orm-xml/`).
+(`kotlin-entity-cannot-be-removed.md` → `/posts/kotlin-entity-cannot-be-removed/`).
 `_` 로 시작하는 파일·디렉터리는 빌드에서 제외된다.
 
 프론트매터 스키마는 `src/content.config.ts` 참고.
